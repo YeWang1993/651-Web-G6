@@ -12,8 +12,8 @@
                   <div>
                     <img class='rounded-circle article-img crop'src="{{ post.author.profile.image.url }}" height="50" width="50">
                     <a class="black-link" href="{% url 'photo_blog-profile' post.author.username %}">{{ post.author }}</a>
-                    {% if post.geolocation %}
-                      <small>{{ post.geolocation }}</small>
+                    {% if post.location %}
+                      <small>{{ post.location }}</small>
                     {% endif %}
                   </div>
                   <img class="img-fluid img-thumbnail" src="{{ post.photo.url }}">
@@ -52,10 +52,19 @@
     </div>
   </div>
 {% else %}
-  <center>
-    Start following other <a href="search">users</a> to see their posts. </br> </br>
-    <!--Suggested user: <a href="/user/peterzernia">peterzernia</a>-->
-  <center>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="content">
+                    <h1>TravelFun</h1>
+                </div>
+             </div>
+        </div>
+    </div>
+{#  <center>#}
+{#    Start following other <a href="search">users</a> to see their posts. </br> </br>#}
+{#    Suggested user: <a href="/user/peterzernia">peterzernia</a>#}
+{#  <center>#}
 {% endif %}
 
 <script>
